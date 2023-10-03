@@ -1,0 +1,142 @@
+% ----------------------------------------------------------------------
+% Configure the document class
+% ----------------------------------------------------------------------
+\documentclass[12pt]{article}
+
+% ----------------------------------------------------------------------
+% Define external packages, language, margins, fonts, new commands, and colors
+% ----------------------------------------------------------------------
+\usepackage[utf8]{inputenc} % Used encoding
+\usepackage[english]{babel} % Writing language
+\usepackage{courier} % Monospace Font
+
+\usepackage[export]{adjustbox} % Align images
+\usepackage{multirow}
+\usepackage{amsmath} % Extra commands for mathematical writing
+\usepackage{amssymb} % Mathematical symbols
+\usepackage{anysize} % Customize margins
+    \marginsize{2cm}{2cm}{2cm}{2cm} % {left}{right}{top}{bottom}
+\usepackage{appendix} % Appendices
+\usepackage{cancel} % Cancel expressions
+\usepackage{caption} % Captions
+    \DeclareCaptionFont{newfont}{\fontfamily{cmss}\selectfont}
+    \captionsetup{labelfont={bf, newfont}}
+\usepackage{cite} % Citations, like [1 - 3]
+\usepackage{color} % Color text
+\usepackage{multicol}
+\usepackage{fancyhdr} % Header and footer
+    \pagestyle{fancy}
+    \fancyhf{}
+    \fancyhead[C]{\footnotesize\fontfamily{cmss}\selectfont UC3M} % Left header
+    \fancyfoot[L]{\footnotesize\fontfamily{cmss}\selectfont OSS} % Left footer
+    \fancyfoot[C]{\thepage} % Center footer
+    \fancyfoot[R]{\footnotesize\fontfamily{cmss}\selectfont MISE} % Right footer
+    \renewcommand{\footrulewidth}{0.4pt} % Footer rule
+\usepackage{float} % Use the [H] specifier for figures
+\usepackage{graphicx} % Images in LaTeX
+\usepackage[colorlinks = true, plainpages = true, linkcolor = istblue, urlcolor = istblue, citecolor = istblue, anchorcolor = istblue]{hyperref}
+\usepackage{indentfirst} % First paragraph
+\usepackage{siunitx} % SI units
+\usepackage{subcaption} % Subfigures
+\usepackage{titlesec} % Font type
+    \titleformat{\section}{\fontfamily{cmss}\selectfont\Large\bfseries}{\thesection}{1em}{}
+    \titleformat{\subsection}{\fontfamily{cmss}\selectfont\large\bfseries}{\thesubsection}{1em}{}
+    \titleformat{\subsubsection}{\fontfamily{cmss}\selectfont\normalsize\bfseries}{\thesubsubsection}{1em}{}
+    \fancyfoot[C]{\fontfamily{cmss}\selectfont\thepage}
+
+% Coding snippets
+\usepackage{listings}
+\lstdefinestyle{code}{
+    backgroundcolor=\color{backgroundColour},   
+    commentstyle=\color{mGreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{mGray},
+    stringstyle=\color{mPurple},
+    basicstyle=\fontfamily{pcr}\scriptsize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2,
+    language=C
+}
+
+% Fill with random text (delete)
+\usepackage{lipsum}
+\usepackage{duckuments}
+
+% New and renew commands
+\newcommand{\sen}{\operatorname{\sen}} % Definition of the sine function
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Definition of a rule
+\renewcommand{\appendixpagename}{\LARGE \fontfamily{cmss}\selectfont Appendices}
+\renewcommand{\appendixtocname}{Appendices}
+
+% Colors
+\definecolor{istblue}{RGB}{3, 171, 230}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mGreen}{rgb}{0,0.6,0}
+\definecolor{mGray}{rgb}{0.5,0.5,0.5}
+\definecolor{mPurple}{rgb}{0.58,0,0.82}
+\definecolor{backgroundColour}{rgb}{0.95,0.95,0.92}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                               Document                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+% ----------------------------------------------------------------------
+% Cover
+% ----------------------------------------------------------------------
+\begin{center}
+    \begin{figure}
+        \vspace{-1.0cm}
+        \includegraphics[scale = 0.1, center]{Images/Logo_UC3M.svg.png} % IST signature type
+    \end{figure}
+    \mbox{}\\[2.0cm]
+    \textsc{\Huge Space Environment}\\[2.5cm]
+    \HRule\\[0.4cm]
+    {\large \bf {\fontfamily{cmss}\selectfont Laboratory 1} \\[0.2cm]}
+    \HRule
+    \\[1.5cm]
+\end{center}
+
+
+\begin{center}
+
+    \begin{flushleft}
+        Work made by:\\[0.3cm] 
+        \textbf{Manuel Mendes Barbosa Salema Guilherme}, 1005006395\\ 
+        \textbf{Manuel Ramos Lopez-Contreras}, 100384006\\[6.0cm]
+    \end{flushleft}
+\end{center}
+\begin{flushleft}
+\end{flushleft}
+\begin{center}
+    \large \bf \fontfamily{cmss}\selectfont 2023/2024 -- 1st Semester, Term 1
+\end{center}
+
+\thispagestyle{empty}
+
+\setcounter{page}{0}
+
+\newpage
+
+% ----------------------------------------------------------------------
+% Content
+% ----------------------------------------------------------------------
+\tableofcontents 
+
+\newpage
+
+% ----------------------------------------------------------------------
+% Development
+% ----------------------------------------------------------------------
+\section{Introduction}
+
+\end{document}
